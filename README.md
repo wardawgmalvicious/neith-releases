@@ -7,6 +7,28 @@ follows the Windows light or dark theme.
 
 This repository holds Neith's installers and update feed only.
 
+## What it opens
+
+Any UTF-8 text file up to 20 MB opens in the editor. Preview shows
+these as more than text:
+
+| Files | Preview |
+| --- | --- |
+| Markdown (`.md`, `.markdown`) | rendered, with frontmatter as a card, code blocks highlighted and images shown |
+| JSON, YAML, TOML | a collapsible tree |
+| CSV, TSV | a table |
+| TMDL | an outline of its tables, columns, measures and other objects |
+| PNG, JPEG, GIF, WebP, AVIF, BMP, ICO | the picture, to zoom and pan |
+| SVG | the picture, and its source in edit mode |
+| PDF | WebView2's built-in PDF viewer |
+
+Any other text file previews as its source, highlighted where Neith knows
+the language: DAX, KQL, Power Query M, TMDL and Bicep among them. The
+editor underlines syntax errors in JSON, YAML, TOML, Python, JavaScript,
+CSS, Rust, Go, PHP and XML, and, with
+[Pyright](https://github.com/microsoft/pyright) or
+[Ruff](https://docs.astral.sh/ruff/) installed, problems in Python files.
+
 ## Install
 
 1. Open the [latest release](https://github.com/wardawgmalvicious/neith-releases/releases/latest)
@@ -23,6 +45,29 @@ Neith needs Windows 10 or 11 (x64) and the Microsoft Edge WebView2
 runtime, which Windows 11 includes. If it's missing, the installer
 downloads it.
 
+## Check your download
+
+With no code signature, the check that a setup.exe is the one published
+here is GitHub's: each release is immutable, and GitHub records an
+attestation of its files when it's published. With the
+[GitHub CLI](https://cli.github.com/), check a downloaded file against
+it:
+
+```powershell
+gh release verify-asset v0.6.0 .\Neith_0.6.0_x64-setup.exe -R wardawgmalvicious/neith-releases
+```
+
+Put the release's version in place of `v0.6.0` and the file's path after
+it. `gh release verify v0.6.0 -R wardawgmalvicious/neith-releases`
+checks the release itself and lists each file's SHA-256.
+
+Without the CLI, the release page shows **Immutable** under its title and
+each file's SHA-256 beside it. Compare that with the file's own:
+
+```powershell
+Get-FileHash .\Neith_0.6.0_x64-setup.exe
+```
+
 ## Updates
 
 Neith checks this repository when it starts and offers each new version.
@@ -30,6 +75,24 @@ Installing one closes Neith, after asking about any unsaved changes.
 
 Every release here is immutable: once published, its files can't be
 changed or replaced.
+
+## What Neith connects to
+
+- **This repository, for updates.** At each start, and when you choose
+  **Check for updates** in Settings, Neith downloads the latest release's
+  `latest.json`, signed in to nothing. Installing an update downloads its
+  setup.exe and signature from the same release, and Neith checks the
+  signature before it runs the setup.
+- **Images a markdown file embeds from the web.** Previewing a file that
+  shows an `https://` image fetches it from its host, as a browser would.
+  `http://` images aren't loaded.
+- **Links you click** open in your default browser.
+
+Neith sends nothing else: no account, no usage data, no crash reports.
+Two programs it runs aren't Neith's, and what they send is theirs to
+say: the WebView2 runtime that draws its window, which is Microsoft's
+and updates itself, and Pyright or Ruff, where you've installed one and
+said yes to checking a folder's Python files.
 
 ## Uninstall
 
