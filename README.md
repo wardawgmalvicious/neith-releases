@@ -40,3 +40,6 @@ Settings > Apps > Installed apps > Neith > Uninstall.
 Ask in [Q&A](https://github.com/wardawgmalvicious/neith-releases/discussions/categories/q-a)
 with the Neith version, your Windows version and the steps that lead to
 the problem.
+
+Report a security problem privately instead, as [SECURITY.md](SECURITY.md)
+says.
