@@ -25,9 +25,16 @@ these as more than text:
 Any other text file previews as its source, highlighted where Neith knows
 the language: DAX, KQL, Power Query M, TMDL and Bicep among them. The
 editor underlines syntax errors in JSON, YAML, TOML, Python, JavaScript,
-CSS, Rust, Go, PHP and XML, and, with
-[Pyright](https://github.com/microsoft/pyright) or
-[Ruff](https://docs.astral.sh/ruff/) installed, problems in Python files.
+CSS, Rust, Go, PHP and XML. With a language server installed, it also
+underlines the problems that server finds, once you allow it for the
+folder:
+
+| Files | Language server |
+| --- | --- |
+| Python | [Pyright](https://github.com/microsoft/pyright) or [Ruff](https://docs.astral.sh/ruff/) |
+| TypeScript, JavaScript | [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) |
+| Shell scripts | [bash-language-server](https://github.com/bash-lsp/bash-language-server), with [ShellCheck](https://www.shellcheck.net/) |
+| YAML | [yaml-language-server](https://github.com/redhat-developer/yaml-language-server) |
 
 ## Install
 
@@ -92,10 +99,19 @@ changed or replaced.
 - **Links you click** open in your default browser.
 
 Neith sends nothing else: no account, no usage data, no crash reports.
-Two programs it runs aren't Neith's, and what they send is theirs to
-say: the WebView2 runtime that draws its window, which is Microsoft's
-and updates itself, and Pyright or Ruff, where you've installed one and
-said yes to checking a folder's Python files.
+The programs it runs aren't Neith's, and what they send is theirs to
+say:
+
+- **The WebView2 runtime** that draws its window, which is Microsoft's
+  and updates itself.
+- **A language server** you've installed and said yes to for a folder.
+  yaml-language-server downloads SchemaStore's catalog and the schema it
+  lists for a file's path, such as a GitHub workflow's, and Kubernetes'
+  custom resource schemas, unless **Fetch schemas for YAML files** is
+  off in Settings; a schema a YAML file names itself is fetched either
+  way.
+- **Claude Code**, in a terminal, when you choose **Ask Claude about this
+  file** on a file's right-click menu.
 
 ## Uninstall
 
