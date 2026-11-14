@@ -54,18 +54,21 @@ attestation of its files when it's published. With the
 it:
 
 ```powershell
-gh release verify-asset v0.6.0 .\Neith_0.6.0_x64-setup.exe -R wardawgmalvicious/neith-releases
+gh release verify-asset (Resolve-Path .\Neith_*_x64-setup.exe) -R wardawgmalvicious/neith-releases
 ```
 
-Put the release's version in place of `v0.6.0` and the file's path after
-it. `gh release verify v0.6.0 -R wardawgmalvicious/neith-releases`
-checks the release itself and lists each file's SHA-256.
+Run it in the folder that holds the download, with one Neith setup in
+it. It checks the file against the latest release; for an older
+release's file, put that release's tag before the path, as in
+`gh release verify-asset v0.5.0 <path> -R <repo>`.
+`gh release verify -R wardawgmalvicious/neith-releases` checks the latest
+release itself and lists each file's SHA-256.
 
 Without the CLI, the release page shows **Immutable** under its title and
 each file's SHA-256 beside it. Compare that with the file's own:
 
 ```powershell
-Get-FileHash .\Neith_0.6.0_x64-setup.exe
+Get-FileHash .\Neith_*_x64-setup.exe
 ```
 
 ## Updates
