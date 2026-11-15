@@ -5,6 +5,8 @@ markdown rendered beside a list of its folder, with a plain-text editor
 that highlights markdown, JSON, YAML, PowerShell and other languages, and
 follows the Windows light or dark theme.
 
+![Neith showing a markdown file rendered beside a list of its folder](docs/neith.png)
+
 This repository holds Neith's installers and update feed only.
 
 ## What it opens
