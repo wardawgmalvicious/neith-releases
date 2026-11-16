@@ -11,6 +11,11 @@ A 1:22 tour, with no sound:
 
 https://github.com/user-attachments/assets/f31e7a15-09bf-405e-9c79-74ab4a95b2d6
 
+And 1:02 of Git and history: a branch's commits, a copy kept at every
+save, compare and restore:
+
+https://github.com/user-attachments/assets/94b063ea-aa8b-47f2-ace9-198a011fe0aa
+
 This repository holds Neith's installers and update feed only.
 
 ## What it opens
