@@ -7,6 +7,10 @@ follows the Windows light or dark theme.
 
 ![Neith showing a markdown file rendered beside a list of its folder](docs/neith.png)
 
+A 1:22 tour, with no sound:
+
+https://github.com/user-attachments/assets/f31e7a15-09bf-405e-9c79-74ab4a95b2d6
+
 This repository holds Neith's installers and update feed only.
 
 ## What it opens
