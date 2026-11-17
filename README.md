@@ -47,6 +47,11 @@ folder:
 | Shell scripts | [bash-language-server](https://github.com/bash-lsp/bash-language-server), with [ShellCheck](https://www.shellcheck.net/) |
 | YAML | [yaml-language-server](https://github.com/redhat-developer/yaml-language-server) |
 
+A file Neith can't show, such as a sound, a video or an Office
+document, offers **Open in default app**, as a file's right-click menu
+does. It opens only what Windows takes for a picture, a sound, a video
+or a document, never a program, a shortcut or a script.
+
 ## Install
 
 1. Open the [latest release](https://github.com/wardawgmalvicious/neith-releases/releases/latest)
@@ -124,6 +129,7 @@ say:
   packages.
 - **Claude Code**, in a terminal, when you choose **Ask Claude about this
   file** on a file's right-click menu.
+- **A file's default app**, when you choose **Open in default app**.
 
 ## Uninstall
 
