@@ -68,6 +68,10 @@ Neith needs Windows 10 or 11 (x64) and the Microsoft Edge WebView2
 runtime, which Windows 11 includes. If it's missing, the installer
 downloads it.
 
+To try it on a file of each kind it opens, download
+`Neith-samples-<version>.zip` from the same release. Its `README.md`
+says what each file shows.
+
 ## Check your download
 
 With no code signature, the check that a setup.exe is the one published
