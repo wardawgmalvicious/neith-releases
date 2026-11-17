@@ -120,7 +120,8 @@ say:
   lists for a file's path, such as a GitHub workflow's, and Kubernetes'
   custom resource schemas, unless **Fetch schemas for YAML files** is
   off in Settings; a schema a YAML file names itself is fetched either
-  way.
+  way. Neith turns off typescript-language-server's download of `@types`
+  packages.
 - **Claude Code**, in a terminal, when you choose **Ask Claude about this
   file** on a file's right-click menu.
 
